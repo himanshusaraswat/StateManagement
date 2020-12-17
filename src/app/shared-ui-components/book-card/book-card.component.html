@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="row mt-5 flex-column" *ngIf="books.length == 0">
+    <app-no-books></app-no-books>
+  </div>
+  <div class="row">
+    <ng-container *ngFor="let book of books; trackBy: trackByID">
+      <div class="col-md-4 mb-5" *ngIf="book?.inStock > 0">
+        <mat-card class="example-card">
+          <img
+            mat-card-image
+            src="{{ book.thumbnail.path }}/portrait_uncanny.{{
+              book.thumbnail.extension
+            }}"
+            [alt]="book?.description"
+          />
+          <mat-card-actions class="d-flex justify-content-between">
+            <button
+              (click)="actionOnBook(book, view)"
+              [matTooltip]="actionTootipText"
+              matTooltipPosition="right"
+              mat-fab
+              color="accent"
+            >
+              <mat-icon *ngIf="view === availableViews.LIBRARY"
+                >library_add</mat-icon
+              >
+              <mat-icon *ngIf="view === availableViews.MY_BOOKS"
+                >keyboard_return</mat-icon
+              >
+            </button>
+            <button
+              matTooltip="Available In Stock"
+              *ngIf="view === availableViews.LIBRARY"
+              matTooltipPosition="left"
+              mat-fab
+              color="primary"
+            >
+              <mat-icon [matBadge]="book?.inStock" [matBadgeColor]="'warn'"
+                >library_books</mat-icon
+              >
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </ng-container>
+  </div>
+</div>

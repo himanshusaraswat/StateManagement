@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hsdevstudio-test": {
+      "hosting": {
+        "library-mgmnt": [
+          "hsdevstudio-test"
+        ]
+      }
+    }
+  }
+}

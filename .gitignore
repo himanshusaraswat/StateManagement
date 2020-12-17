@@ -1,0 +1,21 @@
+# Dot files
+.DS_Store
+.env
+.idea
+.vscode/
+
+# Build files
+build/
+dist/
+out/
+bin/
+node_modules/
+package-lock.json
+
+# Logs
+**/npm-debug.log
+test_logs/
+
+# Coverage
+.nyc_output/
+coverage/
