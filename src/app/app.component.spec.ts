@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Library Management'`, () => {
+  it(`should have as title 'State Management'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Library Management');
+    expect(app.title).toEqual('State Management');
   });
 
   // it('should render title', () => {
   //   const fixture = TestBed.createComponent(AppComponent);
   //   fixture.detectChanges();
   //   const compiled = fixture.nativeElement;
-  //   expect(compiled.querySelector('.content span').textContent).toContain('library-mgmnt app is running!');
+  //   expect(compiled.querySelector('.content span').textContent).toContain('State-mgmnt app is running!');
   // });
 });

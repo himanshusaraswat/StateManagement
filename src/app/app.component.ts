@@ -5,9 +5,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent implements OnInit {
-  title = 'Library Management';
+  title = 'State Management';
   constructor() {}
   ngOnInit(): void {
-    this.title = 'Library Management';
+    this.title = 'State Management';
   }
 }
